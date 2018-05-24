@@ -22,11 +22,14 @@
     ``
 		
 4. **deploy** - [spock](http://spockframework.org/) + [geb](http://www.gebish.org/) + [testcontainers](https://www.testcontainers.org/)
-	Deploying our app to the docker container, starting it, runing our tests and shutdown the container.
-	Video of test execution into container will be saved into build folder.
   
   ``
 	gradle -Dtest.single=DeployTest clean test
   ``
+  
+  
+	Deploying our app to the docker container, starting it, runing our tests and shutdown the container.
+	
+	Video of test execution into container will be saved into build folder.
 
 
