@@ -1,0 +1,56 @@
+group 'com.iklymchuk.gTest'
+version '0.0.1-SNAPSHOT'
+
+apply plugin: 'groovy'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    jcenter()
+    mavenCentral()
+    //maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+
+    compile (
+            'org.codehaus.groovy:groovy-all:2.3.11'
+    )
+
+    testCompile(
+            //'org.codehaus.groovy:groovy-all:2.4.4',
+
+
+            'org.gebish:geb-junit4:2.1',
+            'org.seleniumhq.selenium:selenium-chrome-driver:3.6.0',
+            'org.seleniumhq.selenium:selenium-firefox-driver:3.6.0',
+
+            'org.seleniumhq.selenium:selenium-support:3.6.0',
+            //'org.seleniumhq.selenium:selenium-support:3.12.0',
+
+            'org.testcontainers:selenium:1.6.0',
+            //1.7.3 didn't work
+            //'org.testcontainers:selenium:1.7.3',
+
+            'org.spockframework:spock-core:1.1-groovy-2.4',
+
+            'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1',   //HTTPBuilder
+
+            //'ch.qos.logback:logback-classic:1.2.3',
+
+            //Geb
+            'org.gebish:geb-core:2.1',
+            'org.gebish:geb-spock:2.1'
+
+    )
+    testRuntime(
+            'com.athaydes:spock-reports:1.2.7',         //Reporting
+            'cglib:cglib-nodep:3.1',                    // Mocking
+            'org.objenesis:objenesis:2.1'               // Mocking no default constructor
+    )
+}
+
+test {
+    systemProperties System.properties
+}
