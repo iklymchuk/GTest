@@ -2,7 +2,7 @@
 
 *Precondition:* **JDK, GDK, Chrome/Chromium**
 
-*Groovy baced testing for:*
+*Groovy based testing for:*
 1. **e2e testing** - [spock](http://spockframework.org/) + [geb](http://www.gebish.org/)
 
   ``
