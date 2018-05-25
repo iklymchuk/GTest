@@ -8,6 +8,7 @@
   ``
 	gradle -Dtest.single=BookTestSample -Dgeb.env=chrome -Dwebdriver.chrome.driver=chromedriver clean test
   ``
+  
   or Page Object example
 
    ``
@@ -34,8 +35,8 @@
   ``
   
   
-	Deploying our app to the docker container, starting it, runing our tests and shutdown the container.
+Deploying our app to the docker container, starting it, runing our tests and shutdown the container.
 	
-	Video of test execution into container will be saved into build folder.
+Video of test execution into container will be saved into build folder.
 
 
