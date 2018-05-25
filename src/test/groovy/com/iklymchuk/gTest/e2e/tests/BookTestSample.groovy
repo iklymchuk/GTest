@@ -1,9 +1,8 @@
-package com.iklymchuk.gTest.e2e
+package com.iklymchuk.gTest.e2e.tests
 
 import geb.spock.GebSpec
 
-class E2eTest extends GebSpec {
-
+class BookTestSample extends GebSpec {
     def "Sample e2e test"() {
 
         when:

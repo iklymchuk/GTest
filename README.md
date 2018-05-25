@@ -6,8 +6,14 @@
 1. **e2e testing** - [spock](http://spockframework.org/) + [geb](http://www.gebish.org/)
 
   ``
-	gradle -Dtest.single=E2eTest -Dgeb.env=chrome -Dwebdriver.chrome.driver=chromedriver clean test
+	gradle -Dtest.single=BookTestSample -Dgeb.env=chrome -Dwebdriver.chrome.driver=chromedriver clean test
   ``
+  or Page Object example
+
+   ``
+  	gradle -Dtest.single=BookTestPageObject -Dgeb.env=chrome -Dwebdriver.chrome.driver=chromedriver clean test
+    ``
+
 	
 2. **api testing** - [spock](http://spockframework.org/) + [http-builder](https://github.com/jgritman/httpbuilder)
 
