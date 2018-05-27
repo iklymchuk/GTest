@@ -8,7 +8,7 @@ pipeline {
         }
          stage('Test') {
                     steps {
-                        sh 'gradle -version'
+                        bat 'gradle -version'
                     }
         }
 
