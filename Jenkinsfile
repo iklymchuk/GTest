@@ -16,5 +16,11 @@ pipeline {
                         bat 'gradle -Dtest.single=CalculatorTest clean test'
                     }
         }
+
+        stage('Integration test') {
+                    steps {
+                         bat 'gradle -Dtest.single=ApiTest clean test'
+                    }
+        }
     }
 }
