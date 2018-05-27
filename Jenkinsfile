@@ -8,11 +8,11 @@ pipeline {
         }
         stage ('gradle version') {
                   steps {
-                    bat 'C:\Gradle\gradle-4.7\bin\gradle -version'
+                    bat 'C:\\Gradle\\gradle-4.7\\bin\\gradle -version'
                 }
          stage('Test') {
                     steps {
-                        bat 'C:\Gradle\gradle-4.7\bin\gradle -Dtest.single=CalculatorTest clean test'
+                        bat 'C:\\Gradle\\gradle-4.7\\bin\\gradle -Dtest.single=CalculatorTest clean test'
                     }
         }
     }
