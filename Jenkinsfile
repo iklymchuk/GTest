@@ -1,4 +1,5 @@
 pipeline {
+    agent none
     stages {
         stage ('Checkout') {
           steps {
@@ -7,7 +8,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'gradle -Dtest.single=CalculatorTest clean test'
+                 bat 'gradle -Dtest.single=CalculatorTest clean test'
             }
         }
     }
