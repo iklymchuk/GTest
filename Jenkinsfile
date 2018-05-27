@@ -8,7 +8,7 @@ pipeline {
         }
          stage('Test') {
                     steps {
-                        bat 'gradle -version'
+                        bat 'C:\Gradle\gradle-4.7\bin\gradle -version'
                     }
         }
 
