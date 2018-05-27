@@ -6,13 +6,14 @@ pipeline {
             git 'https://github.com/iklymchuk/GTest.git'
           }
         }
-        stage ('gradle version') {
+        stage ('Gradle version') {
                   steps {
-                    bat 'C:\\Gradle\\gradle-4.7\\bin\\gradle -version'
+                    bat 'gradle -version'
                 }
-         stage('Test') {
+        }
+         stage('Unit test') {
                     steps {
-                        bat 'C:\\Gradle\\gradle-4.7\\bin\\gradle -Dtest.single=CalculatorTest clean test'
+                        bat 'gradle -Dtest.single=CalculatorTest clean test'
                     }
         }
     }
