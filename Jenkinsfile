@@ -20,7 +20,12 @@ pipeline {
         stage('Integration test') {
                     steps {
                          bat 'gradle -Dtest.single=ApiTest clean test'
-                    }
+                   }
+        }
+    }
+    post {
+        always {
+            junit 'build/test-results/**/TEST-*.xml'
         }
     }
 }
