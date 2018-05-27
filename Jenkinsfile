@@ -6,6 +6,11 @@ pipeline {
             git 'https://github.com/iklymchuk/GTest.git'
           }
         }
+         stage('Test') {
+                    steps {
+                        sh 'gradle -version'
+                    }
+        }
 
     }
 }
