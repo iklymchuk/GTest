@@ -15,6 +15,5 @@ pipeline {
                         bat 'C:\Gradle\gradle-4.7\bin\gradle -Dtest.single=CalculatorTest clean test'
                     }
         }
-
     }
 }
