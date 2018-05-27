@@ -1,5 +1,4 @@
 pipeline {
-    agent { docker 'gradle:4.5-jdk8-alpine' }
     stages {
         stage ('Checkout') {
           steps {
@@ -8,7 +7,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'gradle -Dtest.single=CalculatorTest clean test'
+                bat 'gradle -Dtest.single=CalculatorTest clean test'
             }
         }
     }
