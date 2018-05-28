@@ -25,7 +25,7 @@ pipeline {
 
         stage('Publish report') {
                       steps {
-                        archive (includes: 'build/spock-reports/*')
+                        archive (includes: 'build/reports/tests/*')
 
                         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/spock-reports', reportFiles: 'index.html', reportName: 'Spock Report', reportTitles: ''])
                       }
