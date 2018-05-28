@@ -22,6 +22,15 @@ pipeline {
                          bat 'gradle -Dtest.single=ApiTest clean test'
                    }
         }
+
+        stage('Publish report') {
+                      steps {
+                        archive (includes: 'pkg/*.gem')
+
+                        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/spock-reports', reportFiles: 'index.html', reportName: 'Spock Report', reportTitles: ''])
+                      }
+        }
+
     }
     post {
         always {
