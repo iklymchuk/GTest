@@ -27,7 +27,14 @@ pipeline {
                       steps {
                         archive (includes: 'build/spock-reports/*.html')
 
-                        publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/spock-reports', reportFiles: 'index.html', reportName: 'Spock Report', reportTitles: ''])
+                        publishHTML([
+                            allowMissing: false,
+                            alwaysLinkToLastBuild: false,
+                            keepAll: false,
+                            reportDir: 'build/spock-reports',
+                            reportFiles: 'index.html',
+                            reportName: 'Spock Report',
+                            reportTitles: 'Spock Report'])
                       }
         }
 
