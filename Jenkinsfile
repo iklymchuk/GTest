@@ -25,7 +25,7 @@ pipeline {
 
         stage('Publish report') {
                       steps {
-                        archive (includes: 'pkg/*.gem')
+                        archive (includes: 'build/spock-reports/*')
 
                         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'build/spock-reports', reportFiles: 'index.html', reportName: 'Spock Report', reportTitles: ''])
                       }
