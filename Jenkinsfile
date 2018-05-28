@@ -6,20 +6,20 @@ pipeline {
             git 'https://github.com/iklymchuk/GTest.git'
           }
         }
-        stage ('Gradle version') {
+        stage ('Clean build') {
                   steps {
-                    bat 'gradle -version'
+                    bat 'gradle clean'
                 }
         }
          stage('Unit test') {
                     steps {
-                        bat 'gradle -Dtest.single=CalculatorTest clean test'
+                        bat 'gradle -Dtest.single=CalculatorTest test'
                     }
         }
 
         stage('Integration test') {
                     steps {
-                         bat 'gradle -Dtest.single=ApiTest clean test'
+                         bat 'gradle -Dtest.single=ApiTest test'
                    }
         }
 
