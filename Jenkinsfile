@@ -18,6 +18,9 @@ pipeline {
         }
 
         stage('Integration test') {
+                    when {
+                        branch 'master'
+                    }
                     steps {
                          bat 'gradle -Dtest.single=ApiTest test'
                    }
