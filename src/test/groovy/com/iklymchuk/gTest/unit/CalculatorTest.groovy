@@ -50,7 +50,7 @@ class CalculatorTest extends Specification {
             calculator.add(2,2)
 
         then:
-            3 * calculator.add(2,2)
+            2 * calculator.add(2,2)
     }
 
     def "Stubbed calculator"() {
