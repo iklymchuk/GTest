@@ -25,7 +25,11 @@ dependencies {
             'org.spockframework:spock-core:1.1-groovy-2.4',
             'org.codehaus.groovy.modules.http-builder:http-builder:0.7.1',   //HTTPBuilder
             'org.gebish:geb-core:2.1',
-            'org.gebish:geb-spock:2.1'
+            'org.gebish:geb-spock:2.1',
+
+            'ru.yandex.qatools.allure:allure-junit-adaptor:1.5.0',
+            'ru.yandex.qatools.allure:allure-commons:1.5.0',
+            'ru.yandex.qatools.allure:allure-spock-1.0-adaptor:1.0'
     )
     testRuntime(
             'com.athaydes:spock-reports:1.2.7',         //Reporting

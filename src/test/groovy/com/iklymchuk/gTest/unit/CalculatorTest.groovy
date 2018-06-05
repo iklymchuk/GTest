@@ -1,8 +1,13 @@
 package com.iklymchuk.gTest.unit
 
+import ru.yandex.qatools.allure.annotations.Features
+import ru.yandex.qatools.allure.annotations.Stories
 import spock.lang.Specification
 import spock.lang.Unroll
 
+
+@Features("Calculator")
+@Stories("User should be able to make sample operations with calculator")
 class CalculatorTest extends Specification {
 
     def calculator
